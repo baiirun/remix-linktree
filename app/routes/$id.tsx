@@ -8,6 +8,8 @@ type Link = {
 };
 
 export const loader: LoaderFunction = async ({ params }) => {
+    // TS can't be sure that this id actually exists in the URL since params
+    // are a dynamic value that contain arbitrary data.
     const id = params.id;
 
     if (!id)
