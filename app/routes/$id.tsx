@@ -16,6 +16,8 @@ export const loader: LoaderFunction = async ({ params }) => {
         });
 
     // TODO: fetch social links from DB based on the id
+    // TODO: add analytics to click-throughs
+    // TODO: some sort of user tracking? How evil do we want to be?
 
     return json(
         [
