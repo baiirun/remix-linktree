@@ -1,3 +1,8 @@
 @tailwind base;
+
+a {
+    @apply underline text-blue-500;
+}
+
 @tailwind components;
 @tailwind utilities;

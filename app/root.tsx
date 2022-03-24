@@ -1,6 +1,6 @@
 import { Links, LinksFunction, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
 import type { MetaFunction } from 'remix';
-import tailwind from './stlyes/tailwind.css';
+import tailwind from './styles/tailwind.css';
 
 export const meta: MetaFunction = () => ({
     charset: 'utf-8',
