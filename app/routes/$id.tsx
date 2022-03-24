@@ -11,6 +11,13 @@ export const loader: LoaderFunction = async ({ params }) => {
     const id = params.id;
 
     if (!id)
+        // If you throw a reponse with a 404 Remix's CatchBoundary will catch it
+        // and render whatever you have in the CatchBoundary.
+        // https://remix.run/docs/en/v1/guides/not-found#root-catch-boundary
+        // https://remix.run/docs/en/v1/api/conventions#catchboundary
+        // If you throw an error, Remix's ErrorBoundary will catch it and render
+        //  whatever you have in the ErrorBoundary.
+        // https://remix.run/docs/en/v1/guides/errors
         throw new Response('No id in $id loader', {
             status: 404,
         });
