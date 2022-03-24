@@ -1,11 +1,14 @@
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
+import { Links, LinksFunction, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
 import type { MetaFunction } from 'remix';
+import tailwind from './stlyes/tailwind.css';
 
 export const meta: MetaFunction = () => ({
     charset: 'utf-8',
     title: 'New Remix App',
     viewport: 'width=device-width,initial-scale=1',
 });
+
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: tailwind }];
 
 export default function App() {
     return (
@@ -16,8 +19,6 @@ export default function App() {
             </head>
             <body
                 style={{
-                    fontFamily: 'system-ui, sans-serif',
-                    lineHeight: '1.4',
                     margin: 'auto',
                     maxWidth: '70ch',
                     padding: '2ch',
