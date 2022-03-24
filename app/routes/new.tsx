@@ -20,7 +20,7 @@ export default function NewLink() {
     // There's lots of fun stuff you can do with Remix's Form like
     // optimistic UI, Form submission state, etc.
     // https://remix.run/docs/en/v1/api/remix#form
-    // https://remix.run/docs/en/v1/api/remix#useformaction
+    // https://remix.run/docs/en/v1/api/remix#useactiondata
 
     return (
         <div>
